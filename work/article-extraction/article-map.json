@@ -1,0 +1,1803 @@
+{
+  "issue": "2026-10-07",
+  "source": "10-07-26 Post - Web.pdf",
+  "articles": [
+    {
+      "slug": "bonnie-tam",
+      "title": "City Council appoints Bonnie Tam as next Public Works Director",
+      "section": "News",
+      "author": "Jake Lannon",
+      "segments": [
+        {
+          "page": 1,
+          "ranges": [
+            [
+              12,
+              36
+            ]
+          ]
+        },
+        {
+          "page": 25,
+          "ranges": [
+            [
+              163,
+              185
+            ],
+            [
+              250,
+              272
+            ],
+            [
+              343,
+              368
+            ]
+          ]
+        }
+      ],
+      "images": [
+        {
+          "page": 1,
+          "rect": [
+            34,
+            608,
+            281,
+            176
+          ],
+          "captionRanges": [
+            [
+              38,
+              38
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "wildwood-pumpkin-patch",
+      "title": "Patch sales notch 1000 gourds for Wildwood",
+      "section": "News",
+      "author": "Jay Russell",
+      "segments": [
+        {
+          "page": 1,
+          "ranges": [
+            [
+              43,
+              72
+            ]
+          ]
+        },
+        {
+          "page": 9,
+          "ranges": [
+            [
+              51,
+              86
+            ]
+          ]
+        }
+      ],
+      "images": [
+        {
+          "page": 1,
+          "rect": [
+            328,
+            686,
+            431,
+            349
+          ],
+          "captionRanges": [
+            [
+              39,
+              40
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "candidates-week-six",
+      "title": "Candidates’ Q & A – City Council Week 6",
+      "section": "News",
+      "author": "Jake Lannon",
+      "segments": [
+        {
+          "page": 1,
+          "ranges": [
+            [
+              81,
+              91
+            ],
+            [
+              78,
+              80
+            ],
+            [
+              92,
+              125
+            ]
+          ]
+        },
+        {
+          "page": 27,
+          "ranges": [
+            [
+              3,
+              168
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "1:92": "Week 6 question:",
+        "1:104": "Bill Reichle",
+        "27:3": "Nancy Beninati",
+        "27:46": "Adam Hundt",
+        "27:86": "Sunny Bostrom-Fleming",
+        "27:126": "Tom Ramsey"
+      }
+    },
+    {
+      "slug": "league-of-women-voters-forum",
+      "title": "League of Women Voters hosts forum for City Council candidates",
+      "section": "News",
+      "author": "Jake Lannon",
+      "segments": [
+        {
+          "page": 1,
+          "ranges": [
+            [
+              130,
+              159
+            ]
+          ]
+        },
+        {
+          "page": 27,
+          "ranges": [
+            [
+              176,
+              217
+            ]
+          ]
+        }
+      ],
+      "images": [
+        {
+          "page": 1,
+          "rect": [
+            328,
+            90,
+            431,
+            194
+          ],
+          "captionRanges": [
+            [
+              182,
+              182
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fire-department-hiring",
+      "title": "City needs to fix hiring procedure at Fire Dept.",
+      "section": "Opinion",
+      "author": "Susan Goldsmith and Joseph Waxman",
+      "segments": [
+        {
+          "page": 2,
+          "ranges": [
+            [
+              12,
+              83
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "post-newsstand",
+      "title": "Piedmont Post news rack at Mulberry’s",
+      "section": "Notices",
+      "author": "",
+      "segments": [
+        {
+          "page": 2,
+          "ranges": [
+            [
+              4,
+              4
+            ],
+            [
+              7,
+              10
+            ]
+          ]
+        }
+      ],
+      "omit": [
+        "2:7"
+      ],
+      "appendText": "Mulberry’s Market. Copies of the paper may be purchased for $1.81 + tax during business hours. Weekly delivery to homes in Piedmont and online access is available by subscription. Call 510-652-2051 for information or go to piedmont-post.com/subscribe.",
+      "note": "Overlapping duplicate text in this notice required manual cleanup.",
+      "literalBlocks": [
+        {
+          "tag": "p",
+          "text": "Newsstand copies of the Piedmont Post are available at Mulberry’s Market. Copies of the paper may be purchased for $1.81 + tax during business hours. Weekly delivery to homes in Piedmont and online access is available by subscription. Call 510-652-2051 for information or go to piedmont-post.com/subscribe."
+        }
+      ],
+      "literalOnly": true
+    },
+    {
+      "slug": "post-online-access",
+      "title": "Piedmont Post at your door and online",
+      "section": "Notices",
+      "author": "",
+      "segments": [
+        {
+          "page": 2,
+          "ranges": [
+            [
+              85,
+              90
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "missed-delivery",
+      "title": "Missed Piedmont Post Delivery?",
+      "section": "Notices",
+      "author": "",
+      "segments": [
+        {
+          "page": 2,
+          "ranges": [
+            [
+              92,
+              96
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "where-in-the-world-submissions",
+      "title": "Collecting photos for Where in the World",
+      "section": "Notices",
+      "author": "",
+      "segments": [
+        {
+          "page": 2,
+          "ranges": [
+            [
+              100,
+              122
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "quote-of-the-week",
+      "title": "Quote of the Week",
+      "section": "Features",
+      "author": "",
+      "segments": [
+        {
+          "page": 2,
+          "ranges": [
+            [
+              202,
+              211
+            ]
+          ]
+        }
+      ],
+      "literalBlocks": [
+        {
+          "tag": "blockquote",
+          "text": "“Losing is not my enemy. Fear of losing is my enemy.”"
+        },
+        {
+          "tag": "p",
+          "text": "– Rafael Nadal\nb. 1986\nSpanish professional tennis champion"
+        }
+      ],
+      "literalOnly": true
+    },
+    {
+      "slug": "submit-news",
+      "title": "How to get news in the Post",
+      "section": "Notices",
+      "author": "",
+      "segments": [
+        {
+          "page": 2,
+          "ranges": [
+            [
+              213,
+              225
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "yes-measure-gg",
+      "title": "Yes on Measure GG",
+      "section": "Letters",
+      "author": "Fran Bishopric Wolfe and Cameron Wolfe, Jr.",
+      "segments": [
+        {
+          "page": 3,
+          "ranges": [
+            [
+              3,
+              40
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "support-measure-gg",
+      "title": "Support Measure GG: Support our community",
+      "section": "Letters",
+      "author": "Kim Hunter",
+      "segments": [
+        {
+          "page": 3,
+          "ranges": [
+            [
+              43,
+              79
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "keep-piedmont-moving",
+      "title": "Keep Piedmont moving forward with Measure GG",
+      "section": "Letters",
+      "author": "Sara Lillevand",
+      "segments": [
+        {
+          "page": 3,
+          "ranges": [
+            [
+              83,
+              129
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "support-adam-hundt",
+      "title": "Join us in supporting Adam Hundt",
+      "section": "Letters",
+      "author": "Erin and Andrew Schultz",
+      "segments": [
+        {
+          "page": 3,
+          "ranges": [
+            [
+              177,
+              183
+            ],
+            [
+              130,
+              174
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vote-bill-reichle",
+      "title": "Vote for Bill Reichle",
+      "section": "Letters",
+      "author": "Sarah Pearson and Evan Seevak",
+      "segments": [
+        {
+          "page": 3,
+          "ranges": [
+            [
+              185,
+              215
+            ]
+          ]
+        },
+        {
+          "page": 25,
+          "ranges": [
+            [
+              76,
+              87
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "reelect-cindi-reiss",
+      "title": "Reelect Dr. Cindi Reiss as Peralta Community College District Trustee, Area 5",
+      "section": "Letters",
+      "author": "Teddy Gray King",
+      "segments": [
+        {
+          "page": 3,
+          "ranges": [
+            [
+              239,
+              291
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "state-of-the-city",
+      "title": "Community invited to Mayor Andersen’s State of the City address on Oct. 15",
+      "section": "News",
+      "author": "",
+      "segments": [
+        {
+          "page": 4,
+          "ranges": [
+            [
+              4,
+              54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "voting-information",
+      "title": "Voting information for the November 3 Election",
+      "section": "News",
+      "author": "",
+      "segments": [
+        {
+          "page": 4,
+          "ranges": [
+            [
+              57,
+              148
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "disaster-preparedness-survey",
+      "title": "Fire Dept. seeks community input on disaster preparedness",
+      "section": "News",
+      "author": "",
+      "segments": [
+        {
+          "page": 4,
+          "ranges": [
+            [
+              152,
+              247
+            ]
+          ]
+        }
+      ],
+      "paragraphStarts": [
+        "4:231"
+      ]
+    },
+    {
+      "slug": "moraga-safety-project",
+      "title": "City Council awards $785,000 contract for Moraga Avenue Pedestrian Safety Project",
+      "section": "News",
+      "author": "Jake Lannon",
+      "segments": [
+        {
+          "page": 4,
+          "ranges": [
+            [
+              251,
+              326
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fairyland-funding",
+      "title": "Barbara Lee announces $5,000,000 in state funding for Fairyland",
+      "section": "News",
+      "author": "Jay Russell",
+      "segments": [
+        {
+          "page": 5,
+          "ranges": [
+            [
+              3,
+              91
+            ],
+            [
+              127,
+              146
+            ]
+          ]
+        }
+      ],
+      "images": [
+        {
+          "page": 5,
+          "rect": [
+            476,
+            780,
+            282,
+            357
+          ],
+          "captionRanges": [
+            [
+              124,
+              126
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "adoptable-cat-mocha",
+      "title": "Adoptable Cat of the Week",
+      "section": "Features",
+      "author": "Quinn White",
+      "segments": [
+        {
+          "page": 5,
+          "ranges": [
+            [
+              94,
+              123
+            ],
+            [
+              149,
+              161
+            ]
+          ]
+        }
+      ],
+      "images": [
+        {
+          "page": 5,
+          "rect": [
+            182,
+            665,
+            124,
+            173
+          ],
+          "captionRanges": [
+            [
+              147,
+              148
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "consent-assembly",
+      "title": "PHS holds annual Consent Assembly",
+      "section": "Schools",
+      "author": "Julia Stokes",
+      "segments": [
+        {
+          "page": 6,
+          "ranges": [
+            [
+              4,
+              111
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "season-of-the-spider",
+      "title": "The season of the spider",
+      "section": "Schools",
+      "author": "Dr. Megan Taylor",
+      "segments": [
+        {
+          "page": 6,
+          "ranges": [
+            [
+              158,
+              203
+            ],
+            [
+              228,
+              246
+            ]
+          ]
+        },
+        {
+          "page": 9,
+          "ranges": [
+            [
+              112,
+              122
+            ],
+            [
+              137,
+              147
+            ],
+            [
+              123,
+              136
+            ]
+          ]
+        }
+      ],
+      "kicker": "Thinking Outside the Classroom"
+    },
+    {
+      "slug": "library-events",
+      "title": "Piedmont Avenue Branch library events",
+      "section": "Events",
+      "author": "",
+      "segments": [
+        {
+          "page": 6,
+          "ranges": [
+            [
+              112,
+              134
+            ],
+            [
+              137,
+              156
+            ],
+            [
+              204,
+              218
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "6:112": "Chair Yoga",
+        "6:123": "Coffee with a Cop",
+        "6:134": "Knitting & Crochet Circle with Susan Segal!",
+        "6:204": "Toddler Storytime",
+        "6:212": "Teen Pop Up Crafts",
+        "6:216": "PIEDMONT AVENUE BRANCH"
+      },
+      "note": "Display title supplied from the library identification; printed event titles and text preserved."
+    },
+    {
+      "slug": "dress-best-for-less",
+      "title": "Dress Best for Less grants $100,000 to Piedmont schools",
+      "section": "Schools",
+      "author": "Heather Meil",
+      "segments": [
+        {
+          "page": 7,
+          "ranges": [
+            [
+              4,
+              46
+            ],
+            [
+              87,
+              114
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "frozen-jr",
+      "title": "PMS musical Frozen JR. coming October 23-25",
+      "section": "Schools",
+      "author": "Amy Moorhead",
+      "segments": [
+        {
+          "page": 7,
+          "ranges": [
+            [
+              50,
+              83
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "psat-preact",
+      "title": "To take or not to take: that is the PSAT and preACT question",
+      "section": "Schools",
+      "author": "Ayla Blanford",
+      "segments": [
+        {
+          "page": 7,
+          "ranges": [
+            [
+              118,
+              249
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "harvest-scarecrows",
+      "title": "Bringing Harvest Festival scarecrows to life",
+      "section": "Features",
+      "author": "Jay Russell",
+      "segments": [
+        {
+          "page": 8,
+          "ranges": [
+            [
+              3,
+              32
+            ],
+            [
+              40,
+              70
+            ]
+          ]
+        }
+      ],
+      "images": [
+        {
+          "page": 8,
+          "rect": [
+            181,
+            796,
+            577,
+            342
+          ],
+          "captionRanges": [
+            [
+              33,
+              33
+            ]
+          ]
+        },
+        {
+          "page": 8,
+          "rect": [
+            34,
+            398,
+            281,
+            376
+          ],
+          "captionRanges": [
+            [
+              34,
+              34
+            ]
+          ]
+        },
+        {
+          "page": 8,
+          "rect": [
+            328,
+            398,
+            430,
+            376
+          ],
+          "captionRanges": [
+            [
+              35,
+              35
+            ]
+          ]
+        },
+        {
+          "page": 8,
+          "rect": [
+            34,
+            65,
+            281,
+            310
+          ],
+          "captionRanges": [
+            [
+              36,
+              37
+            ]
+          ]
+        },
+        {
+          "page": 8,
+          "rect": [
+            328,
+            65,
+            281,
+            310
+          ],
+          "captionRanges": [
+            [
+              38,
+              39
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "event-calendar",
+      "title": "Event Calendar",
+      "section": "Events",
+      "author": "Jay Russell",
+      "segments": [
+        {
+          "page": 9,
+          "ranges": [
+            [
+              6,
+              48
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "9:6": "Oakland Zoo",
+        "9:17": "Adventure Playground",
+        "9:28": "Chabot Space & Science Center",
+        "9:40": "Leona Canyon Hiking Trail"
+      }
+    },
+    {
+      "slug": "girl-scout-book-drive",
+      "title": "Girl Scout Troop donates 800 books",
+      "section": "Schools",
+      "author": "",
+      "segments": [
+        {
+          "page": 10,
+          "ranges": [
+            [
+              2,
+              7
+            ],
+            [
+              9,
+              32
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "street-sweeping-schedule",
+      "title": "Street sweeping schedule – 2026-27",
+      "section": "News",
+      "author": "",
+      "segments": [
+        {
+          "page": 11,
+          "ranges": [
+            [
+              2,
+              225
+            ]
+          ]
+        }
+      ],
+      "special": "street-sweeping"
+    },
+    {
+      "slug": "street-sweeping-tips",
+      "title": "Street sweeping tips for residents",
+      "section": "News",
+      "author": "",
+      "segments": [
+        {
+          "page": 11,
+          "ranges": [
+            [
+              227,
+              238
+            ]
+          ]
+        }
+      ],
+      "special": "sweeping-tips"
+    },
+    {
+      "slug": "ppd-blue",
+      "title": "PPD Blue",
+      "section": "News",
+      "author": "",
+      "segments": [
+        {
+          "page": 11,
+          "ranges": [
+            [
+              251,
+              360
+            ]
+          ]
+        },
+        {
+          "page": 25,
+          "ranges": [
+            [
+              90,
+              111
+            ]
+          ]
+        },
+        {
+          "page": 11,
+          "ranges": [
+            [
+              362,
+              373
+            ]
+          ]
+        }
+      ],
+      "kicker": "Excerpts from the Piedmont Police Department Log",
+      "headings": {
+        "11:253": "Sept. 25 - Oct. 2",
+        "11:254": "The Week by the Numbers",
+        "11:262": "Friday, September 25",
+        "11:271": "Saturday, September 26",
+        "11:287": "Sunday, September 27",
+        "11:292": "Monday, September 28",
+        "11:310": "Tuesday, September 29",
+        "11:327": "Wednesday, September 30",
+        "11:336": "Thursday, October 1",
+        "25:90": "Friday, October 2",
+        "11:362": "Pick of the Week"
+      },
+      "omit": [
+        "11:251",
+        "11:252",
+        "11:363"
+      ]
+    },
+    {
+      "slug": "volleyball-castro-valley",
+      "title": "PHS volleyball team beats Castro Valley – first time since 2018",
+      "section": "Sports",
+      "author": "Jonathan Comeaux",
+      "segments": [
+        {
+          "page": 12,
+          "ranges": [
+            [
+              9,
+              69
+            ],
+            [
+              122,
+              182
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "12:125": "Match Recap",
+        "12:174": "Tuesday vs. Alameda",
+        "12:178": "NEXT UP"
+      }
+    },
+    {
+      "slug": "athletes-of-the-month",
+      "title": "Athletes of the Month: Maika Ting & Henry Stein",
+      "section": "Sports",
+      "author": "Jonathan Comeaux",
+      "segments": [
+        {
+          "page": 12,
+          "ranges": [
+            [
+              76,
+              86
+            ],
+            [
+              94,
+              103
+            ],
+            [
+              87,
+              92
+            ],
+            [
+              104,
+              119
+            ]
+          ]
+        },
+        {
+          "page": 28,
+          "ranges": [
+            [
+              4,
+              25
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "12:94": "MAIKA TING",
+        "12:92": "HENRY STEIN",
+        "28:4": "Honorable Mentions"
+      }
+    },
+    {
+      "slug": "girls-tennis",
+      "title": "Girls tennis team tops College Prep, Castro Valley",
+      "section": "Sports",
+      "author": "Jonathan Comeaux",
+      "segments": [
+        {
+          "page": 13,
+          "ranges": [
+            [
+              7,
+              75
+            ]
+          ]
+        },
+        {
+          "page": 28,
+          "ranges": [
+            [
+              30,
+              54
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "13:46": "6-1 over College Prep",
+        "13:64": "4-3 to Head-Royce",
+        "28:36": "6-1 over Castro Valley",
+        "28:51": "NEXT UP"
+      }
+    },
+    {
+      "slug": "water-polo",
+      "title": "Water polo team suffers two losses",
+      "section": "Sports",
+      "author": "Jonathan Comeaux",
+      "segments": [
+        {
+          "page": 13,
+          "ranges": [
+            [
+              82,
+              150
+            ],
+            [
+              157,
+              179
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "13:113": "17-10 to Acalanes",
+        "13:144": "13-12 to Berkeley",
+        "13:169": "Tuesday vs. Castro Valley",
+        "13:174": "NEXT UP"
+      }
+    },
+    {
+      "slug": "sports-schedule",
+      "title": "Piedmont sports schedule",
+      "section": "Sports",
+      "author": "",
+      "segments": [
+        {
+          "page": 13,
+          "ranges": [
+            [
+              181,
+              211
+            ]
+          ]
+        }
+      ],
+      "special": "sports-schedule"
+    },
+    {
+      "slug": "cross-country",
+      "title": "Piedmont competes in first league meet of season",
+      "section": "Sports",
+      "author": "Jonathan Comeaux",
+      "segments": [
+        {
+          "page": 14,
+          "ranges": [
+            [
+              5,
+              39
+            ],
+            [
+              44,
+              46
+            ],
+            [
+              53,
+              114
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "14:107": "NEXT UP"
+      }
+    },
+    {
+      "slug": "flag-football",
+      "title": "Flag football team dominates American 53-6",
+      "section": "Sports",
+      "author": "Jonathan Comeaux",
+      "segments": [
+        {
+          "page": 14,
+          "ranges": [
+            [
+              120,
+              228
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "14:177": "Game Recap"
+      }
+    },
+    {
+      "slug": "haunted-halloween-hikes",
+      "title": "Jaunts for a haunted Halloween",
+      "section": "Features",
+      "author": "Jonathan Comeaux",
+      "segments": [
+        {
+          "page": 15,
+          "ranges": [
+            [
+              5,
+              69
+            ],
+            [
+              81,
+              141
+            ],
+            [
+              146,
+              176
+            ]
+          ]
+        }
+      ],
+      "kicker": "Hiking with Jon",
+      "headings": {
+        "15:14": "Tyson Lake, Piedmont",
+        "15:64": "Hayward Plunge, Hayward",
+        "15:109": "Black Diamond Mines, Antioch",
+        "15:123": "Niles Canyon, Fremont",
+        "15:136": "Moss Beach Distillery, Moss Beach",
+        "15:156": "Redwood Road Preschool, Oakland Hills"
+      },
+      "omit": [
+        "15:137",
+        "15:157"
+      ]
+    },
+    {
+      "slug": "festival-opera",
+      "title": "Festival Opera presents Mad Scenes at PCA on Oct. 25",
+      "section": "Arts",
+      "author": "Allyson Aleksey",
+      "segments": [
+        {
+          "page": 16,
+          "ranges": [
+            [
+              5,
+              36
+            ],
+            [
+              40,
+              52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "autumn-lights-festival",
+      "title": "Autumn Lights Festival returns to Lake Merritt Oct. 15",
+      "section": "Arts",
+      "author": "Allyson Aleksey",
+      "segments": [
+        {
+          "page": 16,
+          "ranges": [
+            [
+              56,
+              89
+            ],
+            [
+              91,
+              108
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "filoli-nightfall",
+      "title": "Filoli’s “Nightfall Halloween” event runs through Nov. 1",
+      "section": "Arts",
+      "author": "Allyson Aleksey",
+      "segments": [
+        {
+          "page": 16,
+          "ranges": [
+            [
+              112,
+              163
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "peter-pan-goes-wrong",
+      "title": "SF Playhouse presents Peter Pan Goes Wrong",
+      "section": "Arts",
+      "author": "Allyson Aleksey",
+      "segments": [
+        {
+          "page": 17,
+          "ranges": [
+            [
+              3,
+              54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "escher-string-quartet",
+      "title": "Music at Kohl Mansion opens 44th season with Escher String Quartet",
+      "section": "Arts",
+      "author": "Allyson Aleksey",
+      "segments": [
+        {
+          "page": 17,
+          "ranges": [
+            [
+              61,
+              124
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sf-opera-costume-sale",
+      "title": "SF Opera hosts two-day costume sale in Burlingame",
+      "section": "Arts",
+      "author": "Allyson Aleksey",
+      "segments": [
+        {
+          "page": 17,
+          "ranges": [
+            [
+              129,
+              172
+            ]
+          ]
+        }
+      ],
+      "subtitle": "Sale held Oct. 17–18"
+    },
+    {
+      "slug": "sound-of-home",
+      "title": "PEBCC celebrates “The Sound of Home” at 2026 benefit concert & auction",
+      "section": "Arts",
+      "author": "",
+      "segments": [
+        {
+          "page": 18,
+          "ranges": [
+            [
+              4,
+              93
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ypso-anniversary",
+      "title": "Young People’s Symphony Orchestra announces 90th anniversary",
+      "section": "Arts",
+      "author": "",
+      "segments": [
+        {
+          "page": 18,
+          "ranges": [
+            [
+              174,
+              276
+            ],
+            [
+              279,
+              280
+            ],
+            [
+              283,
+              284
+            ],
+            [
+              286,
+              286
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "piedmont-center-for-arts",
+      "title": "Welcome to the Piedmont Center for the Arts",
+      "section": "Events",
+      "author": "",
+      "segments": [
+        {
+          "page": 18,
+          "ranges": [
+            [
+              98,
+              172
+            ],
+            [
+              277,
+              277
+            ],
+            [
+              281,
+              281
+            ]
+          ]
+        }
+      ],
+      "headings": {
+        "18:99": "Oakland Art Association gallery show",
+        "18:114": "Michael Stehr Art History Lecture",
+        "18:128": "Virginia Tichenor’s Ragtime Quartet Concert",
+        "18:143": "In the Tradition Jazz & Pop Piano Trio",
+        "18:152": "String, Skin, & Breath Band Concert"
+      },
+      "appendText": "www.piedmontcenterforthearts.org"
+    },
+    {
+      "slug": "nace-is-nice",
+      "title": "Wednesday Walkers discover that “Nace is Nice!”",
+      "section": "Features",
+      "author": "Ken Hubbert",
+      "segments": [
+        {
+          "page": 20,
+          "ranges": [
+            [
+              6,
+              117
+            ],
+            [
+              119,
+              169
+            ]
+          ]
+        }
+      ],
+      "kicker": "Walking on Wednesday",
+      "images": [
+        {
+          "page": 20,
+          "rect": [
+            34,
+            105,
+            724,
+            400
+          ],
+          "captionRanges": [
+            [
+              170,
+              175
+            ]
+          ]
+        },
+        {
+          "page": 20,
+          "rect": [
+            476,
+            831,
+            282,
+            261
+          ],
+          "captionRanges": [
+            [
+              118,
+              118
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "savoie-wines",
+      "title": "Savoie: France’s Alpine wines",
+      "section": "Features",
+      "author": "Pierre DuMont",
+      "segments": [
+        {
+          "page": 21,
+          "ranges": [
+            [
+              4,
+              118
+            ],
+            [
+              121,
+              163
+            ]
+          ]
+        }
+      ],
+      "kicker": "The Wine Corner",
+      "headings": {
+        "21:72": "Philippe Viallet: a family name in Savoie wine",
+        "21:122": "NV Viallet Crémant de Savoie",
+        "21:130": "2024 G.G. Bouvet Roussette de Savoie",
+        "21:142": "2024 Vialet Chignin-Bergeron",
+        "21:154": "2023 Clos de la Galeze Mondeuse"
+      },
+      "omit": [
+        "21:73",
+        "21:74",
+        "21:121",
+        "21:123",
+        "21:129",
+        "21:131",
+        "21:141",
+        "21:143",
+        "21:153",
+        "21:155"
+      ]
+    },
+    {
+      "slug": "akc-dog-sports",
+      "title": "The price of the prize: Why AKC dog sports are slowly dying",
+      "section": "Features",
+      "author": "Sierra Berrick",
+      "segments": [
+        {
+          "page": 22,
+          "ranges": [
+            [
+              7,
+              107
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ronald-pengilly",
+      "title": "J. Ronald Pengilly",
+      "section": "Obituary",
+      "author": "",
+      "segments": [
+        {
+          "page": 22,
+          "ranges": [
+            [
+              111,
+              149
+            ],
+            [
+              153,
+              169
+            ]
+          ]
+        }
+      ],
+      "subtitle": "5/5/1934 – 9/28/2026"
+    },
+    {
+      "slug": "requip",
+      "title": "New nonprofit with Piedmont connection",
+      "section": "News",
+      "author": "Christy Guidici",
+      "segments": [
+        {
+          "page": 22,
+          "ranges": [
+            [
+              179,
+              179
+            ],
+            [
+              181,
+              189
+            ],
+            [
+              193,
+              196
+            ],
+            [
+              199,
+              200
+            ],
+            [
+              202,
+              217
+            ],
+            [
+              219,
+              240
+            ]
+          ]
+        }
+      ],
+      "note": "Byline recovered manually from a PDF line that overlapped unrelated display text."
+    },
+    {
+      "slug": "piedmont-springs-hotel",
+      "title": "Piedmont Springs Hotel, circa 1871",
+      "section": "History",
+      "author": "Gail G. Lombardi",
+      "segments": [
+        {
+          "page": 23,
+          "ranges": [
+            [
+              6,
+              74
+            ],
+            [
+              77,
+              109
+            ]
+          ]
+        }
+      ],
+      "kicker": "The History of Piedmont",
+      "images": [
+        {
+          "page": 23,
+          "rect": [
+            34,
+            896,
+            429,
+            233
+          ],
+          "captionRanges": [
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "page": 23,
+          "rect": [
+            476,
+            789,
+            282,
+            340
+          ],
+          "captionRanges": [
+            [
+              75,
+              76
+            ]
+          ]
+        },
+        {
+          "page": 23,
+          "rect": [
+            34,
+            54,
+            725,
+            495
+          ],
+          "captionRanges": [
+            [
+              110,
+              110
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nancy-beninati-reining",
+      "title": "Nancy Beninati for City Council",
+      "section": "Letters",
+      "author": "Jon Reining",
+      "segments": [
+        {
+          "page": 25,
+          "ranges": [
+            [
+              115,
+              151
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bill-reichle-nelsons",
+      "title": "Bill Reichle for City Council",
+      "section": "Letters",
+      "author": "Tim and Marian Nelson",
+      "segments": [
+        {
+          "page": 25,
+          "ranges": [
+            [
+              154,
+              160
+            ],
+            [
+              186,
+              219
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "adam-hundt-fullerton",
+      "title": "Endorsing Adam Hundt for City Council",
+      "section": "Letters",
+      "author": "Pamela Strike Fullerton",
+      "segments": [
+        {
+          "page": 25,
+          "ranges": [
+            [
+              222,
+              249
+            ],
+            [
+              273,
+              296
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nancy-beninati-smegal",
+      "title": "Support Nancy Beninati for City Council",
+      "section": "Letters",
+      "author": "Cory Smegal",
+      "segments": [
+        {
+          "page": 25,
+          "ranges": [
+            [
+              299,
+              342
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "starr-schaefer-report",
+      "title": "STARR ★ SCHAEFER Report",
+      "section": "Commercial feature",
+      "author": "",
+      "segments": [
+        {
+          "page": 25,
+          "ranges": [
+            [
+              4,
+              73
+            ]
+          ]
+        }
+      ],
+      "subtitle": "Your monthly go-to for real estate market trends, market stats & mortgage money matters",
+      "headings": {
+        "25:5": "THE VALUE OF LOCAL REPRESENTATION:",
+        "25:31": "MORTGAGE MONEY",
+        "25:51": "MARKET OVERVIEW: 9/1/26-9/30/26"
+      }
+    },
+    {
+      "slug": "candidate-scorecard",
+      "title": "Candidates’ Scorecard Week 6",
+      "section": "News",
+      "author": "",
+      "segments": [
+        {
+          "page": 27,
+          "ranges": [
+            [
+              224,
+              358
+            ]
+          ]
+        }
+      ],
+      "special": "scorecard"
+    },
+    {
+      "slug": "community-calendar",
+      "title": "2026 Calendar of Events",
+      "section": "Events",
+      "author": "",
+      "segments": [
+        {
+          "page": 28,
+          "ranges": [
+            [
+              58,
+              65
+            ]
+          ]
+        }
+      ],
+      "special": "community-calendar"
+    },
+    {
+      "slug": "where-in-the-world-geneva",
+      "title": "Where in the World Are We?",
+      "section": "Features",
+      "author": "",
+      "segments": [
+        {
+          "page": 28,
+          "ranges": [
+            [
+              66,
+              70
+            ]
+          ]
+        }
+      ],
+      "note": "This photo feature has a caption rather than a conventional article body; its printed title is retained.",
+      "images": [
+        {
+          "page": 28,
+          "rect": [
+            486,
+            123,
+            260,
+            342
+          ],
+          "captionRanges": [
+            [
+              66,
+              68
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

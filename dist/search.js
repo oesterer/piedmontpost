@@ -6,9 +6,11 @@ export function searchPages(pages, query, {issue='',mode='words',sort='relevance
  for (const page of pages) {
   if (issue && page.date !== issue) continue;
   const text = normalize(page.text);
-  if (!terms.every(term => text.includes(term))) continue;
+  const articles = (page.articles || []).map(article => ({...article, searchable: normalize(article.title + ' ' + article.text)})).filter(article => terms.every(term => article.searchable.includes(term)));
+  if (!terms.every(term => text.includes(term)) && !articles.length) continue;
+  articles.sort((a,b) => terms.reduce((sum,term) => sum + b.searchable.split(term).length - a.searchable.split(term).length,0));
   const score = terms.reduce((sum,term) => sum + Math.min(text.split(term).length - 1, 20),0);
-  matches.push({...page, score, terms});
+  matches.push({...page, score, terms, title: articles.map(article => article.title).join(' · '), titleSource: articles.some(article => article.source === 'detected') ? 'detected' : 'reviewed', excerptText: articles.length ? articles[0].title + '. ' + articles[0].text : page.text});
  }
  return matches.sort((a,b) => (sort === 'relevance' ? b.score-a.score : 0) || (sort === 'oldest' ? a.date.localeCompare(b.date) : b.date.localeCompare(a.date)) || a.page-b.page);
 }
