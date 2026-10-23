@@ -81,7 +81,7 @@ To regroup or republish the existing cache without logging in or downloading PDF
 npm run publish:indexes
 ```
 
-`--rebuild` on the archive indexer re-extracts discovered PDFs; it is unnecessary for republishing cached data or retrying previously failed issues.
+`--rebuild` on the archive indexer re-extracts discovered PDFs; it is unnecessary for republishing cached data or retrying previously failed issues. Both normal and rebuild runs retire an unlisted cached URL when a current dated link for the same issue date has been successfully indexed or validated in cache. The old cache JSON is retained for recovery, but excluded from publication. Missing issue dates and failed replacements are preserved; two same-date PDFs that are both currently listed remain separate.
 
 ## Deploy
 

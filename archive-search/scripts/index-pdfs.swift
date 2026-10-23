@@ -27,6 +27,9 @@ func detectedArticles(_ page: PDFPage) -> [[String: Any]] {
   }
   return PDFLine(id: id, text: text, box: selection.bounds(for: page), size: size)
  }
+ return detectedArticles(lines: lines, bounds: bounds)
+}
+func detectedArticles(lines: [PDFLine], bounds: CGRect) -> [[String: Any]] {
  let sizes = lines.filter { $0.text.count > 18 && $0.size > 0 && $0.size < 16 }.map { $0.size }.sorted()
  let bodySize: CGFloat = sizes.isEmpty ? 10 : sizes[sizes.count/2]
  let excluded: Set<String> = ["piedmont post", "opinion", "sports", "local items", "schools", "features", "arts & entertainment", "real estate", "inside", "our city", "our news", "our paper", "our post", "read it in the post", "advertise in the post", "letters - main", "letters - cont", "classifieds"]
@@ -44,6 +47,26 @@ func detectedArticles(_ page: PDFPage) -> [[String: Any]] {
    return abs(last.size-candidate.size)<2 && distance>last.size*0.6 && distance<last.size*1.7 && overlap>min(last.box.width,candidate.box.width)*0.35
   }) { groups[index].append(candidate) } else { groups.append([candidate]) }
  }
+ // Keep a smaller, adjacent deck with its main headline. Otherwise the
+ // nearest-heading body assignment gives all article text to the subtitle.
+ var blocks: [(title: [PDFLine], deck: [PDFLine])] = []
+ for group in groups {
+  let box = group.reduce(CGRect.null) { $0.union($1.box) }
+  let size = group.map { $0.size }.max() ?? 0
+  if let index = blocks.indices.last(where: { index in
+   let parent = blocks[index]
+   let parentBox = (parent.title + parent.deck).reduce(CGRect.null) { $0.union($1.box) }
+   let parentSize = parent.title.map { $0.size }.max() ?? 0
+   let gap = parentBox.minY - box.maxY
+   let overlap = min(parentBox.maxX, box.maxX) - max(parentBox.minX, box.minX)
+   let aligned = abs(parentBox.minX-box.minX)<12 || abs(parentBox.midX-box.midX)<12
+   let interveningBody = lines.contains { line in
+    line.size <= bodySize*1.4 && line.box.midY > box.maxY && line.box.midY < parentBox.minY && line.box.midX >= box.minX && line.box.midX <= box.maxX
+   }
+   return size <= parentSize*0.85 && gap >= -2 && gap < parentSize*1.5 && aligned && overlap > min(parentBox.width,box.width)*0.6 && !interveningBody
+  }) { blocks[index].deck.append(contentsOf: group) }
+  else { blocks.append((title: group, deck: [])) }
+ }
  // Infer text-column margins from repeated positions of ordinary body lines.
  let body = lines.filter { $0.size <= bodySize*1.35 && $0.text.count>12 && $0.box.width>bounds.width*0.10 && $0.box.width<bounds.width*0.45 }
  var columns: [CGFloat] = []
@@ -52,14 +75,15 @@ func detectedArticles(_ page: PDFPage) -> [[String: Any]] {
   columns.append(x)
  }
  if columns.isEmpty { columns = [bounds.minX] }
- struct Heading { let title: String; let box: CGRect; let left: CGFloat; let right: CGFloat }
- let headings: [Heading] = groups.compactMap { group in
-  let box = group.reduce(CGRect.null) { $0.union($1.box) }
+ struct Heading { let title: String; let box: CGRect; let left: CGFloat; let right: CGFloat; let subtitle: String }
+ let headings: [Heading] = blocks.compactMap { block in
+  let group = block.title
+  let box = (group + block.deck).reduce(CGRect.null) { $0.union($1.box) }
   let title = group.map { $0.text }.joined(separator: " ")
   if title.count < 8 { return nil }
   let left = columns.last(where: { $0 <= box.minX+3 }) ?? box.minX
   let right = columns.first(where: { $0 > box.maxX-3 }).map { $0-5 } ?? bounds.maxX
-  return Heading(title: title, box: box, left: left, right: right)
+  return Heading(title: title, box: box, left: left, right: right, subtitle: block.deck.map { $0.text }.joined(separator: " "))
  }
  var bodies = Array(repeating: [PDFLine](), count: headings.count)
  for line in lines where line.size <= bodySize*1.4 {
@@ -72,7 +96,7 @@ func detectedArticles(_ page: PDFPage) -> [[String: Any]] {
  }
  return headings.indices.compactMap { index in
   let body = bodies[index].sorted { $0.id<$1.id }
-  let text = cleanText(body.map { $0.text }.joined(separator: "\n"))
+  let text = cleanText(([headings[index].subtitle] + body.map { $0.text }).joined(separator: "\n"))
   // Short display slogans and most advertising blocks have little accompanying text.
   if text.count<100 { return nil }
   return ["title": headings[index].title, "text": text, "source": "detected"]

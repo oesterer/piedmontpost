@@ -90,3 +90,15 @@ test('non-newspaper labels are ignored before download, without recording a fail
  const result=await syncIssues({...f,links:[{url:A,label:'July 22, 2026'},{url:B,label:'Parade Program'}]});
  assert.equal(result.stats.ignored,1);assert.equal(result.stats.failed,0);assert.equal(result.stats.added,1);assert.equal(f.counts.downloads,1);
 });
+
+test('current dated replacement retires only unlisted same-date URLs; failed replacement preserves old issue',async t=>{
+ const f=await fixture(t),old={url:A,label:'October 14, 2026'},replacement={url:B,label:'October 14, 2026'},other={url:C,label:'October 7, 2026'};
+ await syncIssues({...f,links:[old,other]});
+ let result=await syncIssues({...f,links:[replacement,other],download:async()=>{throw Error('offline');},downloadRetries:0});
+ assert.equal(result.index.issues.length,2);assert(result.index.issues.some(i=>i.sourceUrl===A));
+ result=await syncIssues({...f,links:[replacement,other]});
+ assert.equal(result.index.issues.length,2);assert(!result.index.issues.some(i=>i.sourceUrl===A));assert(result.index.issues.some(i=>i.sourceUrl===B));
+ assert((await fs.stat(path.join(f.cacheDir,'issues',pdfIdentity(A)+'.json'))).isFile());
+ // Two explicitly listed PDFs on the same date remain available.
+ result=await syncIssues({...f,links:[old,replacement,other]});assert.equal(result.index.issues.length,3);
+});

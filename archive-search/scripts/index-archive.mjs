@@ -83,7 +83,9 @@ export async function syncIssues({links, cacheDir, download, extract, rebuild=fa
  const stats = {discovered:0,added:0,reprocessed:0,skipped:0,ignored:0,failed:0};
  let attempted = 0;
  const failures=[];
- for (const link of uniqueLinks(links)) {
+ const discovered=uniqueLinks(links),discoveredKeys=new Set(discovered.map(link=>link.key)),currentDates=new Set();
+ const confirmDate=(link,date)=>{if((link.date||guessDate(link.label||''))===date)currentDates.add(date);};
+ for (const link of discovered) {
   stats.discovered++;
   if(!isWeeklyIssue(link)){stats.ignored++;log('Skipping non-issue link: '+link.label);continue;}
   const file = path.join(cacheDir,'issues',link.key+'.json');
@@ -91,7 +93,7 @@ export async function syncIssues({links, cacheDir, download, extract, rebuild=fa
   let cached;
   try { cached = await readJSON(file,null); } catch { cached=null; }
   if (previous && validIssue(cached) && !rebuild) {
-   previous.sourceUrl=link.url; stats.skipped++; continue;
+   previous.sourceUrl=link.url; confirmDate(link,cached.issue.date); stats.skipped++; continue;
   }
   if (attempted>=limit) continue;
   attempted++;
@@ -116,11 +118,21 @@ export async function syncIssues({links, cacheDir, download, extract, rebuild=fa
    await atomicJSON(file,data);
    manifest.entries[link.key]={sourceUrl:link.url,label:link.label||'',date:data.issue.date,etag:downloaded.etag||null,indexedAt:new Date().toISOString()};
    await atomicJSON(manifestFile,manifest);
+   confirmDate(link,data.issue.date);
    stats[previous?'reprocessed':'added']++;
   } catch (error) {
    stats.failed++; failures.push({label:name,message:error.message});
    log('Failed '+name+': '+error.message);
   } finally { if(temporary) await fs.rm(temporary,{recursive:true,force:true}); }
+ }
+ // A current, successfully indexed dated link supersedes an unlisted URL
+ // for the same weekly issue. Keep its JSON on disk for recovery, but stop
+ // publishing it. Absent dates and failed replacements remain untouched.
+ for(const [key,entry] of Object.entries(manifest.entries)){
+  if(!discoveredKeys.has(key)&&currentDates.has(entry.date)){
+   log('Retiring superseded PDF for '+entry.date+': '+entry.sourceUrl);
+   delete manifest.entries[key];
+  }
  }
  await atomicJSON(manifestFile,manifest);
  // Merge cached text, without opening or reprocessing old PDFs. Preserve older
