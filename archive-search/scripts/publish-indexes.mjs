@@ -69,6 +69,13 @@ export async function publishIndexes(index,{outputDir=path.join(ROOT,'public'),s
  descriptors.sort((a,b)=>b.latestIssue.localeCompare(a.latestIssue)||a.id.localeCompare(b.id));
  const issues=[...issuesById.values()].sort((a,b)=>b.date.localeCompare(a.date)||a.id.localeCompare(b.id));
  const manifest={version:1,generatedAt:new Date().toISOString(),source:index.source,quarterThrough:cutoff,batchSize:settings.batchSize||20,memoryCacheBytes:settings.memoryCacheBytes||16777216,issueCount:issues.length,pageCount:index.pages.length,indexes:descriptors,issues};
+ // Keep no-op checks stable: polling must not create timestamp-only commits.
+ try {
+  const previous=JSON.parse(await fs.readFile(path.join(outputDir,'manifest.json'),'utf8'));
+  const {generatedAt:oldTime,...oldContent}=previous;
+  const {generatedAt:newTime,...newContent}=manifest;
+  if(JSON.stringify(oldContent)===JSON.stringify(newContent))manifest.generatedAt=oldTime;
+ } catch(error) {if(error.code!=='ENOENT')throw error;}
  // The manifest is the final write: every referenced index already exists.
  await atomic(path.join(outputDir,'manifest.json'),JSON.stringify(manifest)+'\n');
  console.log(`Published ${descriptors.filter(d=>d.kind==='quarterly').length} quarterly and ${descriptors.filter(d=>d.kind==='weekly').length} weekly indexes; ${issues.length} issues, ${index.pages.length} pages.`);

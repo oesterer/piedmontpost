@@ -9,7 +9,7 @@ test('publishes mixed immutable files, compression variants and manifest without
  assert.equal(first.indexes.length,4);assert.equal(first.indexes.filter(e=>e.kind==='quarterly').length,2);assert.equal(first.indexes[0].latestIssue,'2026-10-14');
  let count=0;
  for(const e of first.indexes){const bytes=await fs.readFile(path.join(outputDir,e.url));assert.equal(bytes.length,e.bytes);assert.deepEqual(gunzipSync(await fs.readFile(path.join(outputDir,e.url+'.gz'))),bytes);assert.deepEqual(brotliDecompressSync(await fs.readFile(path.join(outputDir,e.url+'.br'))),bytes);count+=JSON.parse(bytes).pages.length;}
- assert.equal(count,4);const second=await publishIndexes(index,{outputDir,settings});assert.deepEqual(second.indexes.map(e=>e.url),first.indexes.map(e=>e.url));
+ assert.equal(count,4);const second=await publishIndexes(index,{outputDir,settings});assert.equal(second.generatedAt,first.generatedAt);assert.deepEqual(second.indexes.map(e=>e.url),first.indexes.map(e=>e.url));
  const next={date:'2026-10-21',file:'https://example.org/new.pdf',pages:1};index.issues.push(next);index.pages.push({...next,page:1,text:'New weekly issue'});
  const third=await publishIndexes(index,{outputDir,settings});assert.equal(third.indexes.length,5);for(const e of first.indexes)assert(third.indexes.some(x=>x.url===e.url));
  assert((await fs.readdir(outputDir)).includes('search-worker.js'));

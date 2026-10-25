@@ -53,6 +53,10 @@ Change `quarterThrough` to a later quarter end if you later want to consolidate 
 - New searches cancel outstanding query downloads and ignore obsolete responses. Content-hashed URLs also allow reuse through the browser HTTP cache.
 - Results open the source PDF in a new tab using `?page=N#page=N`; actual page navigation depends on the PDF viewer. Headline detection remains approximate.
 
+## Automatic weekly updates
+
+For staff without local development tools, use the scheduled/manual GitHub Actions job. See [AUTOMATION.md](AUTOMATION.md) for the one-time GitHub secret, GitHub Pages setup, schedules, and recovery instructions. The incremental cache is tracked in Git; temporary and compiled files remain ignored.
+
 ## Weekly maintenance
 
 Requires macOS with Swift/PDFKit (Xcode Command Line Tools) and Node.js 20+. Install dependencies once:

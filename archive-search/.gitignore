@@ -1,5 +1,10 @@
 node_modules/
-cache/
+cache/*
+!cache/manifest.json
+!cache/issues/
+!cache/deployment.json
+cache/issues/*
+!cache/issues/*.json
 .env
 .env.*
 .DS_Store
