@@ -31,3 +31,5 @@ Staff continue publishing weekly PDF links in Wix. For immediate indexing, use *
 Completed calendar quarters are consolidated automatically; the current quarter stays weekly. The calculated cutoff uses America/Los_Angeles and is recorded in the generated manifest for diagnostics.
 
 The old maintenance/cache files remain in this repository's Git history unless separately removed with a history rewrite. No history rewrite is part of this migration.
+
+Published indexes are JSON only. Precompressed `.gz`/`.br` sidecar files are not needed or generated.
