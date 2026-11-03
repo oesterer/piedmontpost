@@ -11,7 +11,59 @@ function node(tag,text,cls){const e=document.createElement(tag);if(text!==undefi
 function busy(value){$('collection').setAttribute('aria-busy',String(value));$('stop').hidden=!value;more.disabled=value;}
 function updateURL(){const p=new URLSearchParams();for(const [key,e]of Object.entries({q:query,year,issue,mode,order}))if(e.value)p.set(key,e.value);history.replaceState(null,'','?'+p);}
 function highlight(text,terms){const frag=document.createDocumentFragment();const escaped=terms.filter(Boolean).sort((a,b)=>b.length-a.length).map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));if(!escaped.length){frag.append(text);return frag;}const re=new RegExp('('+escaped.join('|')+')','gi');let last=0;for(const m of text.matchAll(re)){frag.append(text.slice(last,m.index));frag.append(node('mark',m[0]));last=m.index+m[0].length;}frag.append(text.slice(last));return frag;}
-function externalLink(label,record,cls){const a=node('a',label,cls);a.href=sourcePdfLink(record);a.target = '_top';a.rel='noopener';return a;}
+// Wix embed bridge: the standalone GitHub archive keeps normal PDF links.
+// When the Wix page confirms that its listener is available, clicks are
+// forwarded to Wix so the visitor can open the PDF from a top-page dialog.
+const PDF_BRIDGE_VERSION = 1;
+let wixPdfBridgeReady = false;
+if (window.top !== window) {
+  const sayHello = () => {
+    if (!wixPdfBridgeReady) {
+      window.top.postMessage({
+        source: 'piedmontpost-archive',
+        action: 'hello',
+        version: PDF_BRIDGE_VERSION
+      }, '*');
+    }
+  };
+  window.addEventListener('message', event => {
+    if (event.source !== window.top) return;
+    const message = event.data;
+    if (message?.source === 'piedmontpost-wix' &&
+        message.action === 'ready' &&
+        message.version === PDF_BRIDGE_VERSION) {
+      wixPdfBridgeReady = true;
+    }
+  });
+  sayHello();
+  const handshakeTimer = setInterval(() => {
+    if (wixPdfBridgeReady) clearInterval(handshakeTimer);
+    else sayHello();
+  }, 1000);
+  // Don't leave a repeating timer running forever on non-Wix embeds.
+  setTimeout(() => clearInterval(handshakeTimer), 20000);
+}
+
+function externalLink(label, record, cls) {
+  const a = node('a', label, cls);
+  a.href = sourcePdfLink(record);
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.addEventListener('click', event => {
+    // Leave normal new-tab behavior alone outside Wix, or until its listener
+    // has acknowledged this bridge. Keep standard modified-click behavior.
+    if (!wixPdfBridgeReady || event.defaultPrevented || event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    window.top.postMessage({
+      source: 'piedmontpost-archive',
+      action: 'open-pdf',
+      version: PDF_BRIDGE_VERSION,
+      url: a.href
+    }, '*');
+  });
+  return a;
+}
 function appendResults(items){for(const match of items){const card=node('article',undefined,'result'),meta=node('div',date(match.date),'result-date');meta.append(node('small','Page '+match.page));if(match.title&&match.titleSource==='detected')meta.append(node('small','Detected headline'));const body=node('div'),heading=node('h3'),link=externalLink(undefined,match);link.append(highlight(match.title||'Page '+match.page+' · Piedmont Post',match.terms));heading.append(link);const excerpt=node('p');excerpt.append(highlight(match.excerpt,match.terms));body.append(heading,excerpt);card.append(meta,body,externalLink('Open page '+match.page,match,'page-link'));results.append(card);count++;}status.textContent=count+' matching '+(count===1?'page':'pages')+' found so far';}
 function fillIssues(){const current=issue.value;issue.replaceChildren(node('option','All issues'));issue.firstChild.value='';for(const item of manifest.issues.filter(i=>!year.value||i.date.startsWith(year.value+'-'))){const opt=node('option',date(item.date));opt.value=item.id;issue.append(opt);}issue.value=current;}
 function browseMore(){let grid=results.querySelector('.issue-grid');if(!grid){grid=node('div',undefined,'issue-grid');results.append(grid);}for(const item of browseItems.slice(browseOffset,browseOffset+12)){const a=externalLink(undefined,item,'issue-card');a.append(node('div','WEEKLY EDITION','eyebrow'),node('h3',date(item.date)),node('p',item.pages+' pages'),node('span','Read this issue','open-issue'));grid.append(a);}browseOffset+=12;more.hidden=browseOffset>=browseItems.length;more.textContent='Show more issues';}
